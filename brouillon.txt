@@ -1,0 +1,138 @@
+class Collectables:
+    """Take care of the objects that the player must gather to defeat the guard"""
+    def __init__(self, niddle, ether, tube):
+         self.niddle = pygame.image.load(aiguille.png).convert_alpha()
+         self.ether = pygame.image.load(ether.png).convert_alpha()
+         self.tube = pygame.image.load(tube_plastique.png).convert_alpha()
+
+         self.case_x = 0
+         self.case_y = 0
+         self.x = 0
+         self.y = 0
+        
+         self.level = level
+
+         self.gen
+
+    def gen(self):
+        """ this method enable the items creation thanks to the file 'level' """
+        with open(self.fichier, 'r') as fichier:
+            structure_level = []
+            for line in fichier:
+                line_level = []
+                for sprite in line:
+                    #do not take in count the end's line code '\n'
+                    if sprite != '\n':
+                        line_level.append(sprite)
+                structure_level.append(line_level)
+            self.structure = structure_level
+
+    def item_draw(self)
+        """Make the 3 items appears randomly"""
+        #create a loop with a confirmation to launch the game ?
+        if self.level.structure[self.case_y][self.case_x] == '0':
+            for random_placement.items('niddle'):       
+            #Calcul de la position réelle en pixels
+                self.x = self.case_x * sprite_size
+                self.y = self.case-y * sprite_size
+            #Image dans la bonne direction
+            #self.direction = self.right
+
+            for random_placement.items('ether'): 
+               ether = Ether(x, y)
+               x = random.randint(30, 350)
+               y = random.randint(30, 350)
+            for random_placement.items('tube'):
+               tube = Tube(x, y)
+               x = random.randint(30, 350)
+               y = random.randint(30, 350)
+
+    def collect(self, gathered_items)
+        """take in count the items who have been collected"""
+        gathered_items = 0
+        for level.structure [mg.case_y][mg.case_x] == 'n' or 'e' or 't':
+            gathered_items += 1
+            print ("Au secours !")
+        #if gathered_items = 3:
+            #Collectables.combned_items = True
+
+    def combined_items(self)
+        """When the 3 items are collected, they are automatically coverted into the injection who allow to defeat the guard"""
+        if gathered_itmes = 3:
+            print("the injection is now in your possession, you can use it to beat the guard !")
+            injection = 1
+            guard_can_be_defeated = True
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+def item_draw(self, random_placement)
+        """Make the 3 items appears randomly"""
+        #create a loop with a confirmation to launch the game and generate the items in the same time ?
+        if self.level.structure[self.case_y][self.case_x] == '0':
+
+            for random_placement.items('niddle'):
+               niddle = Niddle(x, y)
+               x = random.randint(30, 350)
+               y = random.randint(30, 350)
+
+            for random_placement.items('ether'): 
+               ether = Ether(x, y)
+               x = random.randint(30, 350)
+               y = random.randint(30, 350)
+
+            for random_placement.items('tube'):
+               tube = Tube(x, y)
+               x = random.randint(30, 350)
+               y = random.randint(30, 350)
+
+def collect(self, collectable):
+
+        harvest_items = 0 #compteur d'items rammassés !
+
+        if collectable == 'niddle':
+            if level.structure [mg.case_y][mg.case_x] == 'niddle': # inutile maintenant ???
+                harvest_items + 1
+                print("Aiguille ramassée !")
+                continuer = 1
+
+        if collectable == 'ether':
+            if level.structure [mg.case_y][mg.case_x] == 'ether':
+                harvest_items + 1
+                print("Ether ramassé !")
+                continuer = 1
+
+        if collectable == 'tube':
+            if level.structure [mg.case_y][mg.case_x] == 'tube':
+                harvest_items + 1
+                print("Tube ramassé !")
+                continuer = 1
+
+                
+
+#if collectable == 'ether':
+        if level.structure [self.case_y][self.case_x] == 'e':
+           # harvest_items + 1
+            print("Ether ramassé !")
+            continuer = 1
+
+        #if collectable == 'tube':
+        if level.structure [self.case_y][self.case_x] == 't':
+           # harvest_items + 1
+            print("Tube ramassé !")
+            continuer = 1
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Terms of victory :
+    if level.structure [mg.case_y][mg.case_x] == 'g':
+
+        if mg.harvest_items == 3:
+            guard_can_be_defeated = True
+            #del pic_gd
+            window.blit(gd.foe, (gd.x, gd.y))
+            print("Congratulation ! you won !")
+            continuer = 1
+
+        elif mg.harvest_items != 3:
+            guard_can_be_defeated = False
+            print("You've been neutralized by the guard !")
+            continuer = 0
