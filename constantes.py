@@ -24,10 +24,10 @@ pic_tub = "ressources/tube_plastique.png"   # the plastic tube
 pic_inj = "ressources/seringue.png"
 
 # graphic elements of the level
-pic_bg = "ressources/background.jpg"       # Background picture !
-pic_start = "ressources/start.png"         # Starting point !
-pic_w1 = "ressources/sand.png"             # Zone 1 Wall picture !
-pic_w2 = "ressources/grass.png"            # Zone 2 Wall picture !           
-pic_w3 = "ressources/water.png"            # Zone 3 Wall picture !           
-pic_w4 = "ressources/brick.png"            # Zone 4 Wall picture !
-pic_end = "ressources/end.png"             # ending case !           
+pic_bg = "ressources/background.jpg"
+pic_start = "ressources/start.png"
+pic_w1 = "ressources/sand.png"
+pic_w2 = "ressources/grass.png"
+pic_w3 = "ressources/water.png"
+pic_w4 = "ressources/brick.png"
+pic_end = "ressources/end.png"
